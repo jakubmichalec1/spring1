@@ -4,4 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
        default-init-method="init"
        default-destroy-method="destroy">
+    <bean id="helloWorld" class="HelloWorld" scope="prototype">
+        <property name="message" value="ABC!"/>
+        <property name="message2" value="ABC2!"/>
+    </bean>
 </beans>
