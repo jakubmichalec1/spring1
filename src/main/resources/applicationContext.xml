@@ -8,4 +8,10 @@
         <property name="message" value="ABC!"/>
         <property name="message2" value="ABC2!"/>
     </bean>
+
+    <bean id="calculation" class="Calculation" scope="prototype">
+        <property name="sum" value="3"/>
+        <property name="sum2" value="4"/>
+    </bean>
+
 </beans>
