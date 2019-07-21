@@ -9,9 +9,30 @@
         <property name="message2" value="ABC2!"/>
     </bean>
 
-    <bean id="calculation" class="Calculation" scope="prototype">
+    <bean id="calculation" class="Calculation" scope="singleton">
         <property name="sum" value="3"/>
         <property name="sum2" value="4"/>
     </bean>
+    <bean id="calculator" class="Calculator" scope="prototype">
 
+    </bean>
+
+    <bean id = "beanForTemplate" abstract = "true">
+        <property name = "message1" value = "Hello World template!"/>
+        <property name = "message2" value = "Hello World template 2!"/>
+        <property name = "message3" value = "Hello World template 3!"/>
+    </bean>
+
+    <bean id="beanForTemplate" class="BeanForTemplate" parent="beanForTemplate">
+        <property name="message1" value="Hello my Own"/>
+        <property name="message3" value="Hello my Own"/>
+    </bean>
+
+    <bean id="car" class="Car">
+        <constructor-arg index="0" ref="engine"/>
+    </bean>
+
+    <bean id = "engine" class="Engine">
+
+    </bean>
 </beans>
